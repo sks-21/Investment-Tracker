@@ -23,10 +23,13 @@ function displayMsg(ans) {
   } else {
     output.classList.add("loss");
     if (ans[0] > -50)
-      msg = `Sorry 😨 you are making a loss of ${ans[0]} and the percent loss is ${ans[1] * -1}%`;
+      msg = `Sorry 😨 you are making a loss of ${
+        ans[0]
+      } and the percent loss is ${ans[1] * -1}%`;
     else
       msg = `Brace up, tough times ahead 😭 You are making a Loss of ${
-         ans[0]} and the percent loss ${ans[1] * -1}%`;
+        ans[0]
+      } and the percent loss ${ans[1] * -1}%`;
   }
   return msg;
 }
@@ -35,20 +38,17 @@ checkBtn.addEventListener("click", () => {
   let initialPrice = stockInitialEL.value;
   let currPrice = stockCurrentEL.value;
   let qty = stockQtyEL.value;
-
-  if( !initialPrice || !currPrice || !qty)
-  msg="Please enter all values!"
   
-  else{
-  //Profit/loss fn
-  let arr = check(initialPrice, currPrice, qty);
-
   // Removing pre-existing applied class, if any
   output.classList.remove("profit");
   output.classList.remove("loss");
+  if (!initialPrice || !currPrice || !qty) msg = "Please enter all values!";
+  else {
+    //Profit/loss fn
+    let arr = check(initialPrice, currPrice, qty);
 
-  //Msg logic
-  let msg = displayMsg(arr);
+    //Msg logic
+    let msg = displayMsg(arr);
   }
   output.innerText = msg;
   stockInitialEL.value = "";

@@ -137,25 +137,24 @@ a:hover {
   color: green;
 }
 
-
 /* Media queries */
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
- label{
-   display: block;
- }
- .input-qty {
-  margin-left: 0rem;
-}
+  label {
+    display: block;
+  }
+  .input-qty {
+    margin-left: 0rem;
+  }
 
-.input-initialprice {
-  margin-left: 0rem;
-}
+  .input-initialprice {
+    margin-left: 0rem;
+  }
 
-.input-currprice{
-  margin-left: 0rem;
-}
-  footer{
+  .input-currprice {
+    margin-left: 0rem;
+  }
+  footer {
     width: 110%;
   }
 }
