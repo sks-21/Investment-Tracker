@@ -7,7 +7,6 @@
 }
 
 body {
-  overflow: hidden;
   margin: 0rem;
   font-family: "Noto Sans JP", sans-serif;
   background-color: #e3f2fd;
@@ -87,7 +86,7 @@ button:active {
   font-weight: bold;
   padding: 1em;
   min-height: 90px;
-  max-width: 400px;
+  max-width: 500px;
   margin: auto;
   border-radius: 8px;
 }
@@ -100,8 +99,6 @@ footer {
   border-top-left-radius: 2rem;
   text-align: center;
   margin-top: 1rem;
-  position: absolute;
-  bottom: 0;
   width: 800px;
 }
 
@@ -138,4 +135,27 @@ a:hover {
 
 .profit {
   color: green;
+}
+
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+ label{
+   display: block;
+ }
+ .input-qty {
+  margin-left: 0rem;
+}
+
+.input-initialprice {
+  margin-left: 0rem;
+}
+
+.input-currprice{
+  margin-left: 0rem;
+}
+  footer{
+    width: 110%;
+  }
 }

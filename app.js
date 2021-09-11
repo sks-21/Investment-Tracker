@@ -36,6 +36,10 @@ checkBtn.addEventListener("click", () => {
   let currPrice = stockCurrentEL.value;
   let qty = stockQtyEL.value;
 
+  if( !initialPrice || !currPrice || !qty)
+  msg="Please enter all values!"
+  
+  else{
   //Profit/loss fn
   let arr = check(initialPrice, currPrice, qty);
 
@@ -45,7 +49,7 @@ checkBtn.addEventListener("click", () => {
 
   //Msg logic
   let msg = displayMsg(arr);
-
+  }
   output.innerText = msg;
   stockInitialEL.value = "";
   stockQtyEL.value = "";
