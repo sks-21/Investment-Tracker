@@ -154,6 +154,11 @@ a:hover {
   .input-currprice {
     margin-left: 0rem;
   }
+
+  .div-container{
+    height:100%
+  }
+  
   footer {
     width: 110%;
   }
