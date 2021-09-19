@@ -13,7 +13,7 @@ function inputValidator(initialPrice, currPrice, qty) {
   if (!initialPrice || !currPrice || !qty) {
     arr = [0, "Please enter all values!"];
   } else if (iPrice <= 0 || cPrice < 0 || q < 0) {
-    arr = [0, "Values can not be -ve."];
+    arr = [0, "Invalid values"];
   } else if (q === 0) {
     arr = [0, "Quantity can not be 0."];
   } else {
